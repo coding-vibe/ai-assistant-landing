@@ -30,4 +30,4 @@ Content is dynamically managed via **Strapi** – a headless CMS.
 > Make sure your [Strapi](https://strapi.io/) backend is running and accessible.  
 > You may need to configure API endpoints or environment variables in `.env.local`.
 
-View [**Demo**](https://vercel.com) – coming soon
+View [**Demo**](https://ai-assistant-landing-omega.vercel.app/)
