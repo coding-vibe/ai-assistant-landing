@@ -1,6 +1,6 @@
 # AI Assistant Landing
 
-AI Assistant Landing is a modern and responsive landing page designed to showcase AI-based product. It’s easy to customize, mobile-friendly, and ready for production.  
+AI Assistant Landing is a modern and responsive landing page designed to showcase AI-based product. It’s easy to customize and mobile-friendly.  
 Content is dynamically managed via **Strapi** – a headless CMS.
 
 ## Features
