@@ -17,13 +17,9 @@ const theme = createTheme({
     },
   },
   palette: {
-    // action: {
-    //   active: '',
-    //   disabled: '',
-    //   disabledBackground: '',
-    //   hover: '',
-    //   selected: '',
-    // },
+    background: {
+      paper: "rgba(255, 255, 255, 0.49)",
+    },
     primary: {
       main: "#3B5AAE",
     },
@@ -50,6 +46,10 @@ const theme = createTheme({
           fontSize: "16px",
           fontWeight: 700,
           boxShadow: "none",
+          "&:hover": {
+            backgroundColor: "rgb(25, 49, 107)",
+            boxShadow: "none",
+          },
         },
       },
       defaultProps: {

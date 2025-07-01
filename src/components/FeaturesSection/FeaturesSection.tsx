@@ -1,12 +1,11 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
+import Image from "next/image";
+import Link from "next/link";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
 
-import Advantages from '@/components/Advantages';
-import Feature from '@/types/feature';
-import generateAssetPath from '@/utils/generateAssetPath';
-import * as classes from './styles';
+import Advantages from "@/components/Advantages";
+import Feature from "@/types/feature";
+import * as classes from "./styles";
 
 interface Props {
   features: Feature[];
@@ -14,22 +13,26 @@ interface Props {
 
 const FeaturesSection = ({ features }: Props) => {
   return (
-    <section css={[classes.section]}>
+    <section css={classes.section}>
       <div css={classes.inner}>
         {features.map((feature, position) => (
           <div key={feature.id} css={classes.featureCard}>
             <Image
               css={[classes.image, classes.mobileImage]}
-              src={generateAssetPath(feature.mobileImage.url)}
+              src={feature.mobileImage.url}
               alt={feature.title}
               width={feature.mobileImage.width}
               height={feature.mobileImage.height}
             />
             <div>
-              <Typography css={classes.title} variant="h2">
+              <Typography css={classes.title} component="h2" variant="h2">
                 {feature.title}
               </Typography>
-              <Typography variant="body1" css={classes.description}>
+              <Typography
+                component="p"
+                variant="body1"
+                css={classes.description}
+              >
                 {feature.description}
               </Typography>
               {!!(feature.features && feature.features.length) && (
@@ -40,10 +43,13 @@ const FeaturesSection = ({ features }: Props) => {
                 {feature.ctaText}
               </Button>
             </div>
-
             <Image
-              css={[classes.image, classes.desktopImage, position % 2 === 1 && classes.imageLeft]}
-              src={generateAssetPath(feature.desktopImage.url)}
+              css={[
+                classes.image,
+                classes.desktopImage,
+                position % 2 === 1 && classes.imageLeft,
+              ]}
+              src={feature.desktopImage.url}
               alt={feature.title}
               width={feature.desktopImage.width}
               height={feature.desktopImage.height}

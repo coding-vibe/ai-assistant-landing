@@ -7,7 +7,6 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Typography from "@mui/material/Typography";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { Theme } from "@mui/material/styles";
-import * as generalClasses from "@/styles/general";
 import Button from "@/components/Button";
 import { navigation } from "./headerData";
 import Logo from "./Logo";
@@ -19,15 +18,12 @@ export default function Header() {
   );
 
   return (
-    <header css={[classes.header, generalClasses.layoutPadding]}>
+    <header css={classes.header}>
       <Container maxWidth="lg">
         <nav css={classes.flexContainer}>
           <div css={classes.flexContainer}>
             <Logo css={classes.logo} />
-            <List
-              css={[generalClasses.desktop, classes.flexContainer]}
-              component="ul"
-            >
+            <List css={[classes.desktop, classes.flexContainer]} component="ul">
               {navigation.navLinksLeft.map((navLink) => (
                 <ListItem key={navLink.label} disablePadding>
                   <ListItemButton component="a" href={navLink.path}>
@@ -38,7 +34,7 @@ export default function Header() {
             </List>
           </div>
           <div css={classes.flexContainer}>
-            <List css={generalClasses.desktop} component="ul">
+            <List css={classes.desktop} component="ul">
               {navigation.navLinksRight.map((navLink) => (
                 <ListItem key={navLink.label} disablePadding>
                   <ListItemButton component="a" href={navLink.path}>
@@ -56,7 +52,7 @@ export default function Header() {
             </div>
             <IconButton
               edge="start"
-              css={[generalClasses.mobile, classes.burgerButton]}
+              css={[classes.mobile, classes.burgerButton]}
               aria-labelledby="open-mobile-menu"
               aria-label="open mobile menu"
             >

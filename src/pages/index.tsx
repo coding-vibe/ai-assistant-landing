@@ -11,7 +11,7 @@ export default function Home({ customers, features, hero }) {
 
   return (
     <>
-      <HeroSection data={hero} />
+      {!!hero && <HeroSection data={hero} />}
       <CustomersSection customers={customers} />
       <FeaturesSection features={features} />
     </>

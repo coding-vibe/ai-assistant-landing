@@ -49,6 +49,11 @@ export const buttonWrap = (theme: Theme) => css`
     color: #000;
     font-weight: 500;
 
+    &:hover {
+      background-color: ${theme.palette.primary.dark};
+      color: ${theme.palette.text.secondary};
+    }
+
     ${theme.breakpoints.up("sm")} {
       font-size: 24px;
       line-height: 1.33;
@@ -60,6 +65,7 @@ export const buttonWrap = (theme: Theme) => css`
     }
   }
 `;
+
 export const rocketIcon = (theme: Theme) => css`
   ${theme.breakpoints.up("sm")} {
     margin-right: 20px;

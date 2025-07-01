@@ -2,6 +2,17 @@ import { css } from "@emotion/react";
 import { Theme } from "@mui/material";
 
 export const header = (theme: Theme) => css`
+  ${theme.breakpoints.up("lg")} {
+    padding: 2% 5%;
+  }
+
+  ${theme.breakpoints.between("sm", "lg")} {
+    padding: 2%;
+  }
+
+  ${theme.breakpoints.down("sm")} {
+    padding: 15px;
+  }
   width: 100%;
   position: absolute;
   color: ${theme.palette.text.secondary};
@@ -50,7 +61,7 @@ export const gradientBorderButton = (theme: Theme) => css`
   & .MuiButton-root {
     position: relative;
     padding: ${theme.spacing(1, 3)};
-    border-radius: 6px;
+    border-radius: 50px;
     font-weight: 500;
     box-shadow: none;
     min-width: 0;
@@ -60,8 +71,8 @@ export const gradientBorderButton = (theme: Theme) => css`
     z-index: 2;
 
     &:hover {
-      background-color: rgba(255, 255, 255, 0.1);
-      box-shadow: none;
+      background-color: rgba(255, 255, 255, 0.05);
+      color: ${theme.palette.primary.dark};
     }
 
     ${theme.breakpoints.down("sm")} {
@@ -73,4 +84,16 @@ export const gradientBorderButton = (theme: Theme) => css`
 export const burgerButton = (theme: Theme) => css`
   margin-left: 20px;
   color: ${theme.palette.text.secondary};
+`;
+
+export const desktop = (theme: Theme) => css`
+  ${theme.breakpoints.down("sm")} {
+    display: none;
+  }
+`;
+
+export const mobile = (theme: Theme) => css`
+  ${theme.breakpoints.up("sm")} {
+    display: none;
+  }
 `;
