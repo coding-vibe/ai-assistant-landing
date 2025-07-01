@@ -48,6 +48,7 @@ const theme = createTheme({
           boxShadow: "none",
           "&:hover": {
             backgroundColor: "rgb(25, 49, 107)",
+            color: "#fff",
             boxShadow: "none",
           },
         },
@@ -58,6 +59,15 @@ const theme = createTheme({
     },
     MuiCssBaseline: {
       styleOverrides: {
+        "*": {
+          boxSizing: "border-box",
+        },
+        "*::before": {
+          boxSizing: "border-box",
+        },
+        "*::after": {
+          boxSizing: "border-box",
+        },
         a: {
           color: "inherit",
           textDecoration: "none",

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Button from "@mui/material/Button";
+import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 
 import Advantages from "@/components/Advantages";
@@ -14,7 +15,7 @@ interface Props {
 const FeaturesSection = ({ features }: Props) => {
   return (
     <section css={classes.section}>
-      <div css={classes.inner}>
+      <Container maxWidth="lg">
         {features.map((feature, position) => (
           <div key={feature.id} css={classes.featureCard}>
             <Image
@@ -38,7 +39,6 @@ const FeaturesSection = ({ features }: Props) => {
               {!!(feature.features && feature.features.length) && (
                 <Advantages css={classes.advantages} items={feature.features} />
               )}
-
               <Button component={Link} href={feature.ctaLink}>
                 {feature.ctaText}
               </Button>
@@ -56,7 +56,7 @@ const FeaturesSection = ({ features }: Props) => {
             />
           </div>
         ))}
-      </div>
+      </Container>
     </section>
   );
 };

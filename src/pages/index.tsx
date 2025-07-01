@@ -5,10 +5,6 @@ import Feature from "@/types/feature";
 import CustomersSection from "@/components/CustomersSection";
 
 export default function Home({ customers, features, hero }) {
-  console.log("Customers:", customers);
-  console.log("Features:", features);
-  console.log("Hero:", hero);
-
   return (
     <>
       {!!hero && <HeroSection data={hero} />}

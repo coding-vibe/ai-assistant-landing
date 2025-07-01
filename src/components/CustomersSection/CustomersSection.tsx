@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import Container from "@mui/material/Container";
 
 import Customer from "@/types/customer";
-import generateAssetPath from "@/utils/generateAssetPath";
 import * as classes from "./styles";
 
 interface Props {
@@ -27,7 +26,7 @@ const CustomersSection = ({ customers }: Props) => {
             {[...customers, ...customers].map(({ id, name, logo }, index) => (
               <Image
                 key={`${id}-${index}`}
-                src={generateAssetPath(logo.url)}
+                src={logo.url}
                 alt={name}
                 width={logo.width}
                 height={logo.height}
